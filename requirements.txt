@@ -3,3 +3,4 @@ pytest-cov
 requests
 python-dotenv
 bump2version
+wheel
