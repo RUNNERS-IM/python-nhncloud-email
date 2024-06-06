@@ -24,19 +24,13 @@ jobs:
         pip install -r requirements.txt
         pip install bump2version twine
 
-    - name: Check bump2version installation
-      run: |
-        source venv/bin/activate
-        which bump2version
-        bump2version --version
-
     - name: Bump version
       id: bumpversion
       run: |
         source venv/bin/activate
         git config --global user.email "dev@runners.im"
         git config --global user.name "Runners"
-        bump2version patch --commit --tag
+        bump2version patch --allow-dirty
         git push --follow-tags
 
     - name: Build package
