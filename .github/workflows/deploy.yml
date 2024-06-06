@@ -36,7 +36,7 @@ jobs:
         source venv/bin/activate
         git config --global user.email "dev@runners.im"
         git config --global user.name "Runners"
-        bump2version patch
+        bump2version patch --commit --tag
         git push --follow-tags
 
     - name: Build package
