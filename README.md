@@ -2,6 +2,8 @@
 
 This is a Python library for interacting with the NHN Cloud Email service.
 
+**Current version: 0.1.0**
+
 ## Installation
 
 To use this library, you need to have Python installed. You can install the required dependencies using pip:
@@ -67,3 +69,6 @@ print(response)
 ```
 
 Make sure to replace placeholders (like `'your_app_key'`, `'your_secret_key'`, etc.) with actual values before using the library.
+
+## Contact
+dev@runners.im
