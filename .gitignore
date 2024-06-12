@@ -87,6 +87,7 @@ venv.bak/
 
 # PyCharm settings
 .idea/
+.idea/*
 
 # Python-specific files
 *.py[cod]

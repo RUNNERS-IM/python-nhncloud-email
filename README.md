@@ -9,7 +9,7 @@ This is a Python library for interacting with the NHN Cloud Email service.
 To use this library, you need to have Python installed. You can install the required dependencies using pip:
 
 ```bash
-pip install nhncloudemail
+pip install -U nhncloud-email
 ```
 
 ## Usage

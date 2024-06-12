@@ -35,7 +35,6 @@ class NHNCloudEmail:
         if attachments:
             payload["attachments"] = self._prepare_attachments(attachments)
 
-        print(headers, payload, self.api_url)
         response = requests.post(f"{self.api_url}/sender/mail", json=payload, headers=headers)
         return self._handle_response(response)
 
