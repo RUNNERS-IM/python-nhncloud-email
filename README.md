@@ -2,7 +2,7 @@
 
 This is a Python library for interacting with the NHN Cloud Email service.
 
-**Current version: 0.1.6**
+**Current version: 0.1.7**
 
 ## Installation
 
