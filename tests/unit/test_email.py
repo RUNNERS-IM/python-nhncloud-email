@@ -9,9 +9,9 @@ load_dotenv()
 class NHNCloudEmailTest(unittest.TestCase):
     def setUp(self):
         self.email_service = NHNCloudEmail(
-            app_key=os.getenv('NHN_CLOUD_APP_KEY'),
-            secret_key=os.getenv('NHN_CLOUD_SECRET_KEY'),
-            sender_email=os.getenv('NHN_CLOUD_SENDER_EMAIL')
+            app_key=os.getenv('NHN_CLOUD_EMAIL_APP_KEY'),
+            secret_key=os.getenv('NHN_CLOUD_EMAIL_SECRET_KEY'),
+            sender_email=os.getenv('NHN_CLOUD_EMAIL_SENDER')
         )
 
     def test_send_email(self):

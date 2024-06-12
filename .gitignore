@@ -90,7 +90,6 @@ venv.bak/
 
 # Python-specific files
 *.py[cod]
-.python-version
 
 # Installer logs
 pip-log.txt

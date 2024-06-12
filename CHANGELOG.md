@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `get_email_status(request_id)`
     - `get_sent_email_list(start_date, end_date)`
 - Added `.env` file support for Email library
-  - Environment variables: `NHN_CLOUD_APP_KEY`, `NHN_CLOUD_SECRET_KEY`, `NHN_CLOUD_SENDER_EMAIL`
+  - Environment variables: `NHN_CLOUD_EMAIL_APP_KEY`, `NHN_CLOUD_EMAIL_SECRET_KEY`, `NHN_CLOUD_EMAIL_SENDER`
 - Comprehensive test coverage with `unittest` and support for mocking API calls using `unittest.mock`
 
 ### Changed
