@@ -1,8 +1,9 @@
 import requests
 import base64
 
+
 class NHNCloudEmail:
-    def __init__(self, app_key, secret_key, sender_email):
+    def __init__(self, app_key, secret_key, sender_email, sender_name):
         """
         Initializes the NHNCloudEmail class with the provided app key, secret key, and sender email address.
 
@@ -14,6 +15,7 @@ class NHNCloudEmail:
         self.app_key = app_key
         self.secret_key = secret_key
         self.sender_email = sender_email
+        self.sender_name = sender_name
 
     def send_email(self, recipient_email, subject, body, attachments=None):
         """
@@ -28,6 +30,7 @@ class NHNCloudEmail:
         headers = self._get_headers()
         payload = {
             "senderAddress": self.sender_email,
+            "senderName": self.sender_name if self.sender_name else "admin",
             "title": subject,
             "body": body,
             "receiverList": [{"receiveMailAddr": recipient_email, "receiveType": "MRT0"}],
@@ -52,6 +55,7 @@ class NHNCloudEmail:
         receivers = [{"receiveMailAddr": email, "receiveType": "MRT0"} for email in recipient_emails]
         payload = {
             "senderAddress": self.sender_email,
+            "senderName": self.sender_name if self.sender_name else "admin",
             "title": subject,
             "body": body,
             "receiverList": receivers,
@@ -75,10 +79,11 @@ class NHNCloudEmail:
         headers = self._get_headers()
         payload = {
             "senderAddress": self.sender_email,
+            "senderName": self.sender_name if self.sender_name else "admin",
             "title": subject,
             "body": body,
             "receiverList": [{"receiveMailAddr": recipient_email, "receiveType": "MRT0"}],
-            "sendTime": schedule_time,
+            "requestDate": schedule_time,
         }
         if attachments:
             payload["attachments"] = self._prepare_attachments(attachments)
